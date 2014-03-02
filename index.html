@@ -7,23 +7,27 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/main.css">
 
-    <script type="text/javascript" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" href="https://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
-    <script type="text/javascript" href="/main.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script type="text/javascript" src="/steps/3.js"></script>
 </head>
 
 <body>
+<div class="container demo">
      <h1>Firebase Demo</h1>
 
-     <h3>Building a message board</h3>
+     <p class="lead">A message board. <span id='online'></span></p>
 
     <div id='chatroom'>
-        <div id='messages'></div>
         <form>
-            <input id='message' type='text' />
+            <input id='message' type='text' autocomplete='off' />
             <button id='send'>Send</button>
         </form>
+        <div id='messages'></div>
     </div>
+</div>
 </body>
 
 </html>

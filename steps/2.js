@@ -1,9 +1,6 @@
 var firebaseRef = new Firebase('https://fb-amherst.firebaseio.com/'),
     chatRoom = firebaseRef.child('chatroom'),
-    amOnline = firebaseRef.child('.info/connected'),
-    uid = Math.random().toString(36).substring(2),
-    userRef = firebaseRef.child('presence/'+ uid),
-    presence = firebaseRef.child('presence')
+    uid = Math.random().toString(36).substring(2)
     ;
 
 $(function() {
@@ -29,16 +26,4 @@ $(function() {
         });
         $('#message').val('');
     });
-
-    amOnline.on('value', function(snapshot) {
-        if (snapshot.val()) {
-            userRef.onDisconnect().remove();
-            userRef.set(true)
-        }  
-    })
-
-    presence.on('value', function(snapshot) {
-        var online = snapshot.numChildren();
-        $('#online').html(online + ' online.');
-    })
 })
