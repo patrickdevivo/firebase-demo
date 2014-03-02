@@ -1,0 +1,6 @@
+#chatroom {
+    max-height: 500px;
+}
+#chatroom .message {
+    padding: 5px;
+}
